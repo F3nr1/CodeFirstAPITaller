@@ -25,7 +25,8 @@ namespace DBTaller.models
         [MaxLength(50)]
         public string Cilindrada { get; set; }
 
-        // ForeignKey 
+        // ForeignKey
+        [Required]
         public int ClienteID { get; set; }
         [ForeignKey("ClienteID")]
         public Cliente Cliente { get; set; }

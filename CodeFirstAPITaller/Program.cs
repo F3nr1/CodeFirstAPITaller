@@ -23,7 +23,7 @@ var app = builder.Build();
 // Connect to DB Comment after creating table
 using (var scope = app.Services.CreateScope())
 {
-    var dataContext = scope.ServiceProvider.GetService<TallerContext>();
+    var dataContext = scope.ServiceProvider.GetRequiredService<TallerContext>();
 
     dataContext.Database.Migrate();
 

@@ -3,6 +3,7 @@ using DBTaller.models;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Builder;
+using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace DBTaller
 {
@@ -41,6 +42,8 @@ namespace DBTaller
             modelBuilder.Entity<Vehiculo>().ToTable("Vehiculos");
             modelBuilder.Entity<Soat>().ToTable("Soat");
             modelBuilder.Entity<Diagnostico>().ToTable("Diagnostico");
+
+            
         }
 
 
